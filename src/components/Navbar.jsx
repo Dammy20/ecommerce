@@ -11,27 +11,27 @@ const Navbar = () => {
     <div>
       <nav className="navbar navbar-expand-lg bg-white py-3 shadow-sm" >
   <div className="container">
-  <Link to={"/"}> <a className=" display navbar-brand fw-bold fs-4 " href="#">LA FASHIONELLE</a></Link>
+  <Link to={"/"}> <span className=" display navbar-brand fw-bold fs-4 " >LA FASHIONELLE</span></Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse " id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0 mx-5">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
+          <Link to={"#"} className="nav-link active" aria-current="page" >Home</Link>
         </li>
         <li className="nav-item">
-          <Link to={"/products"}><a className="nav-link mx-4 text-decoration:none" href="#">Products</a></Link>
+          <Link to={"/products"}><span className="nav-link mx-4 text-decoration:none" >Products</span></Link>
         </li>
         
             </ul>
             <div className='button'>
-            <a href="" className="btn btn-outline-dark">Login
+            <span  className="btn btn-outline-dark">Login
              <i className="fa fa-sign-in me-1"></i>       
-             </a>
+             </span>
             </div>
             <div className='button'>
-           <Link to={"/card"}> <a href="" className="btn btn-outline-dark"> Cart  {cart.length}</a></Link> 
+           <Link to={"/card"}> <span  className="btn btn-outline-dark"> Cart {cart.length}</span></Link> 
          
                          
             

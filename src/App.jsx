@@ -15,7 +15,7 @@ function App() {
   return (
     
     <Default>
-      <Home />,
+      <Home />
     <Products/>
     </Default>
      

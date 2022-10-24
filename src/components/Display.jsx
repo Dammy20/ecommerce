@@ -20,9 +20,10 @@ const Display = () => {
   useEffect(() => {
     const Posts = async () => {
       try {
-        const response = await axios.get(`http://fakestoreapi.com/products/${id}`);
-        setUsers(response.data)
-        // console.log(response.data);
+        const response = await axios.get("/data.json");
+        
+        const [single] = response.data.filter(f => f.id == id);
+        setUsers(single)
       } catch (error) {
         console.log(error);
       }
@@ -56,8 +57,7 @@ const Display = () => {
           <h3 className='display-6 fw-bold my-4'>${users.price }</h3>
           <p className='lead'>{users.description }</p>
          <button className='btn btn-outline-dark px-4 py-2' onClick={()=>handleCart(id)}>Add to cart</button>
-         {/* <Link to={"/card"}> <button className='btn btn-outline-dark ms-2 px-3 py-2'>Go to cart</button></Link> */}
-        </div>
+         </div>
       </main>
           
     </Default>

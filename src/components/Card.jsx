@@ -8,25 +8,26 @@ import Default from '../layout/Default'
 
 const Card = () => {
   
-    const { cart, setCart } = useContext(ThemeContext)
+    const themecontext = useContext(ThemeContext)
   const remove = (index) => {
-    cart.splice(index, 1)
-    setCart([...cart])
-    localStorage.setItem("cart", JSON.stringify([...cart]))
+    // console.log(cart)
+    themecontext.cart.splice(index, 1)
+    themecontext.setCart([...themecontext.cart])
+    localStorage.setItem("cart", JSON.stringify([...themecontext.cart]))
   }
   
-let updated = JSON.parse(localStorage.getItem("cart"))
+// let updated = JSON.parse(localStorage.getItem("cart"))
   
   return (
-  <div><nav class="navbar navbar-light bg-light justify-content-between">
-  <a class="navbar-brand text-uppercase lead fw-bold">Card page</a>
-  <Link to={"/products"}><a class="navbar-brand text-uppercase lead fw-bold">Back</a></Link>
-  <form class="form-inline">
+  <div><nav className="navbar navbar-light bg-light justify-content-between">
+  <span className="navbar-brand text-uppercase lead fw-bold">Card page</span>
+  <Link to={"/products"}><span className="navbar-brand text-uppercase lead fw-bold">Back</span></Link>
+  <form className="form-inline">
      </form>
 </nav>
-      {updated.map((items, index) =>
+      {themecontext?.cart.map((items, index) =>
         
-          <main className='d-flexxx shadow'>
+          <main key={index} className='d-flexxx shadow'>
         <div className='col-md-3 mt-5'>
         <img src={items.image} alt={items.title} height="60px" width="60px" />
         

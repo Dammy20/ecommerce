@@ -18,7 +18,7 @@ const Products = () => {
         const getProduct = async () => {
             try {
             // setLoading(true);
-            const response = await axios.get("http://fakestoreapi.com/products");
+            const response = await axios.get("/data.json");
           
               setData(response.data)
               setFilter(response.data)
@@ -84,12 +84,12 @@ const Products = () => {
   </div>
       <div className='w-100 d-flex flex-wrap gap-5 p-5'>
         {filter.map((item) => 
-        <div className="card mb-4 " style={{width: "15rem", }}>
+        <div key={item.id} className="card mb-4 " style={{width: "15rem", }}>
             <img className="card-img-top w-100 h-100" src={item.image} alt={item.title } />
   <div className="card-body">
               <h5 className="card-title">{item.title.substring(0,12) }</h5>
               <p className="card-text">{item.price }</p>
-   <Link to={`/display/${item.id}`}><a href="#" className="btn btn-danger">Buy now</a></Link>
+   <Link to={`/display/${item.id}`}><span className="btn btn-danger">Buy now</span></Link>
   </div>
 </div>
           

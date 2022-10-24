@@ -13,7 +13,7 @@ const Themeprovider = ({ children }) => {
     const getItemsFromLS = () => {
       let g = JSON.parse(localStorage.getItem("cart"));
       // cart.concat(g)
-      setCart([...g])
+      if(g != null) setCart([...g])
     }
 
     if (!ismounted && cart.length <= 0) getItemsFromLS()

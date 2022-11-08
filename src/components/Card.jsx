@@ -37,7 +37,7 @@ const Card = () => {
           <h1 className=' div4 '>{items.title}</h1>
             <div className='div-btn'>
                <h3 className='div6  my-2'>${items.price}</h3>
-              <button onClick={()=>remove(index)} className=' div7  btn btn-outline-danger  ' >Remove from cart</button>
+              <button onClick={()=>remove(index)} className=' div7  btn btn-outline-danger  ' >🗑</button>
         
           </div>
              </div>

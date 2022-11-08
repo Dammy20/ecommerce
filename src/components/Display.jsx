@@ -45,7 +45,7 @@ const Display = () => {
 
   return (
     <Default>
-      <main className='d-flex'>
+      <main className='flex-wrap'>
         <div className='col-md-6'>
         <img src={users.image} alt={users.title} height="400px" width="400px" />
         

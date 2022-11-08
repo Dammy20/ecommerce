@@ -45,12 +45,12 @@ const Display = () => {
 
   return (
     <Default>
-      <main className='flex-wrap'>
-        <div className='col-md-6'>
-        <img src={users.image} alt={users.title} height="400px" width="400px" />
+      <main className=' div4 d-flex'>
+        <div className='d-3 col-md-6'>
+        <img className='img4' src={users.image} alt={users.title} height="400px" width="400px" />
         
         </div>
-        <div className='col-md-6'>
+        <div className=' display col-md-6'>
           <h4 className='text-uppercase text-black-50'>{users.category }</h4>
           <h1 className='display-5'>{users.title}</h1>
           <p className='lead fw-bolder'>Rating {users.rating && users.rating.rate}  <i className="fa fa-star"></i></p>

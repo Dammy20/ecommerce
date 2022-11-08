@@ -41,3 +41,17 @@ height: 3rem;
 .div6{
  padding-top: 10px;
 }
+
+@media(max-width: 360px){
+.button{
+  flex-direction: column;
+}
+.div4{
+  flex-direction: column;
+}
+.display{
+  padding-top: 10px;
+}
+
+
+}
